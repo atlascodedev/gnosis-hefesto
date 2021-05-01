@@ -5,12 +5,10 @@ import { nanoid } from "nanoid";
 import sharp from "sharp";
 import { Request, Response } from "express";
 import fs from "fs";
-import {
-  adonisConfig,
-  AdonisImage,
-  AdonisPath,
-} from "../../config/adonis.config";
+import config from '@hefesto/configuration'
 import converToSlug from "../../helper/converToSlug";
+
+
 
 export const optimizeAndCreateThumbnail = async (
   req: Request,
