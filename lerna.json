@@ -1,6 +1,17 @@
 {
   "packages": [
-    "packages/*"
+    "app/*",
+    "cli/*"
   ],
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "command": {
+    "bootstrap": {
+      "npmClientArgs": [
+        "--no-package-lock"
+      ]
+    },
+    "run": {
+      "npmClientArgs": ["--stream"]
+    }
+  }
 }

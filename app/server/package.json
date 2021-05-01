@@ -1,0 +1,37 @@
+{
+  "name": "@hefesto/server",
+  "version": "1.0.0",
+  "scripts": {
+    "build:app": "tsc",
+    "serve:app": "npm run build && firebase emulators:start --only functions",
+    "shell:app": "npm run build && firebase functions:shell",
+    "start:app": "npm run shell",
+    "deploy:app": "firebase deploy --only functions",
+    "logs:app": "firebase functions:log",
+    "dev:app": "tsc --watch"
+  },
+  "engines": {
+    "node": "12"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "@types/express": "4.17.6",
+    "@types/express-serve-static-core": "4.17.8",
+    "@types/node": "^12.20.11",
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "firebase-admin": "^9.2.0",
+    "firebase-functions": "^3.11.0",
+    "nanoid": "^3.1.20",
+    "sharp": "^0.27.1",
+    "typescript": "^4.2.4"
+  },
+  "devDependencies": {
+    "@types/sharp": "^0.27.1",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}

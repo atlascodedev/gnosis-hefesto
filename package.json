@@ -7,6 +7,8 @@
     "build": "lerna run build --stream",
     "dev": "lerna run dev --stream && firebase emulators:start",
     "deploy": "lerna run deploy --stream",
-    "clean": "lerna clean -y && lerna bootstrap --hoist"
+    "clean": "lerna clean -y && lerna bootstrap --hoist",
+    "dev-app": "lerna run dev:app --stream",
+    "build-app": "lerna run build:app --stream"
   }
 }
