@@ -17,10 +17,10 @@
     "web-vitals": "^1.1.1"
   },
   "scripts": {
-    "dev:app": "react-scripts start",
-    "build:app": "react-scripts build",
-    "test:app": "react-scripts test",
-    "eject:app": "react-scripts eject"
+    "dev-hefesto": "react-scripts start",
+    "build-hefesto": "react-scripts build",
+    "test-hefesto": "react-scripts test",
+    "eject-hefesto": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
