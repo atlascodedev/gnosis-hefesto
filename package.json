@@ -8,8 +8,7 @@
     "dev": "lerna run dev --stream && firebase emulators:start",
     "deploy": "lerna run deploy --stream",
     "clean": "lerna clean -y && lerna bootstrap --hoist",
-    "dev-hefesto": "lerna run dev-hefesto --stream",
-    "build-hefesto": "lerna run build-hefesto --stream",
-    "predev-hefesto": "firebase emulators:start"
+    "dev-hefesto": "lerna run dev-hefesto --stream & firebase emulators:start",
+    "build-hefesto": "lerna run build-hefesto --stream"
   }
 }

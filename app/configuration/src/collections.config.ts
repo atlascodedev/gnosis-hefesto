@@ -1,4 +1,4 @@
 
 
-export const collections: any[] = []
+export const collections: any[] = [] || ""
 
