@@ -4,11 +4,9 @@
   },
   "name": "hefesto",
   "scripts": {
-    "build": "lerna run build --stream",
-    "dev": "lerna run dev --stream && firebase emulators:start",
-    "deploy": "lerna run deploy --stream",
     "clean": "lerna clean -y && lerna bootstrap --hoist",
-    "dev-hefesto": "lerna run dev-hefesto --stream & firebase emulators:start",
-    "build-hefesto": "lerna run build-hefesto --stream"
+    "dev:hefesto": "lerna run dev --stream --scope={@hefesto/server,@hefesto/scripts,@hefesto/configuration,@hefesto/view}",
+    "build:hefesto": "lerna run build --stream --scope={@hefesto/server,@hefesto/scripts,@hefesto/configuration,@hefesto/view}",
+    "tsc:hefesto": "lerna run build --parallel --scope={@hefesto/server,@hefesto/scripts,@hefesto/configuration}" 
   }
 }

@@ -50,10 +50,10 @@
     "yup": "^0.32.9"
   },
   "scripts": {
-    "dev-hefesto": "react-scripts start",
-    "build-hefesto": "react-scripts build",
-    "test-hefesto": "react-scripts test",
-    "eject-hefesto": "react-scripts eject"
+    "dev": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [

@@ -2,13 +2,13 @@
   "name": "@hefesto/server",
   "version": "1.0.0",
   "scripts": {
-    "build-hefesto": "tsc",
-    "serve-hefesto": "npm run build && firebase emulators:start --only functions",
-    "shell-hefesto": "npm run build && firebase functions:shell",
-    "start-hefesto": "npm run shell",
-    "deploy-hefesto": "firebase deploy --only functions",
-    "logs-hefesto": "firebase functions:log",
-    "dev-hefesto": "tsc --watch"
+    "build": "tsc",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log",
+    "dev": "tsc --watch"
   },
   "engines": {
     "node": "12"
