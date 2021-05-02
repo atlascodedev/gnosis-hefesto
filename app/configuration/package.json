@@ -2,8 +2,8 @@
   "name": "@hefesto/configuration",
   "version": "1.0.0",
   "description": "",
-  "types": "lib/index.d.ts",
-  "main": "lib/index.js",
+  "types": "dist/main.d.ts",
+  "main": "dist/main.js",
   "scripts": {
     "dev-hefesto": "tsc --watch",
     "build-hefesto": "tsc"
