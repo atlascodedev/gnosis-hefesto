@@ -5,8 +5,8 @@
   "types": "dist/main.d.ts",
   "main": "dist/main.js",
   "scripts": {
-    "dev-hefesto": "tsc --watch",
-    "build-hefesto": "tsc"
+    "dev": "tsc --watch",
+    "build": "tsc"
   },
   "author": "",
   "license": "MIT",

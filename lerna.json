@@ -1,7 +1,7 @@
 {
   "packages": [
-    "app/*",
-    "cli/*"
+    "hefesto/*",
+    "hefesto-cli/*"
   ],
   "version": "0.0.0",
   "command": {
