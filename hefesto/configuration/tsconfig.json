@@ -3,6 +3,7 @@
   "include": ["src"],
   "compilerOptions": {
     "declaration": true,
+    "moduleResolution": "node",
     "declarationMap": true,
     "target": "es5",                                
     "module": "commonjs",                           

@@ -7,6 +7,7 @@
     "clean": "lerna clean -y && lerna bootstrap --hoist",
     "dev:hefesto": "lerna run dev --stream --scope={@hefesto/server,@hefesto/scripts,@hefesto/configuration,@hefesto/view}",
     "build:hefesto": "lerna run build --stream --scope={@hefesto/server,@hefesto/scripts,@hefesto/configuration,@hefesto/view}",
-    "tsc:hefesto": "lerna run build --parallel --scope={@hefesto/server,@hefesto/scripts,@hefesto/configuration}" 
+    "tsc:hefesto": "lerna run build --parallel --scope={@hefesto/server,@hefesto/scripts,@hefesto/configuration}",
+    "watch:hefesto": "lerna run dev --parallel --scope={@hefesto/server,@hefesto/scripts,@hefesto/configuration}"
   }
 }
