@@ -4,18 +4,12 @@
 /node_modules
 /.pnp
 .pnp.js
-**/node_modules
 
 # testing
 /coverage
-.env
-./functions/node_modules
 
 # production
 /build
-
-.github
-
 
 # misc
 .DS_Store
@@ -27,7 +21,3 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-# logs
-
-*.log
