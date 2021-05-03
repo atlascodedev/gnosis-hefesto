@@ -129,7 +129,7 @@ export const categoryCreate = (): ThunkAction<
     let newCategory: Category;
 
     if (
-      cachedState.categoryDraft.fields!.category_parent == ROOT_LEVEL_CATEGORY
+      cachedState.categoryDraft.fields!.category_parent === ROOT_LEVEL_CATEGORY
     ) {
       categoryRoot = true;
       categoryParent = null;
@@ -139,7 +139,7 @@ export const categoryCreate = (): ThunkAction<
       let categoryParentLocal: Category[] = cachedState.activeCollection.categories!.filter(
         (category: Category, index: number) => {
           return (
-            category.uuid == cachedState.categoryDraft.fields!.category_parent
+            category.uuid === cachedState.categoryDraft.fields!.category_parent
           );
         }
       );
@@ -200,7 +200,7 @@ export const categoryDelete = (
     for (let i = 0; i < categoriesState.length; i++) {
       const category = categoriesState[i];
 
-      if (category.uuid == categoryUUID) {
+      if (category.uuid === categoryUUID) {
         categoryInternal.push(category);
       }
     }

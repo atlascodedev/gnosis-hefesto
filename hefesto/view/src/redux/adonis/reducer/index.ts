@@ -1,4 +1,4 @@
-import { AdonisImage, AdonisOrderedTriple } from "@hefesto/types";
+import { AdonisImage } from "@hefesto/types";
 import {
   AdonisGalleryState,
   AdonisActionTypes,

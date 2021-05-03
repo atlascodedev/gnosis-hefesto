@@ -1,4 +1,3 @@
-import { FormatListNumberedTwoTone } from "@material-ui/icons";
 import React from "react";
 import { connect, ConnectedProps } from "react-redux";
 import useFieldGrouping from "../../../hooks/useFieldGrouping";

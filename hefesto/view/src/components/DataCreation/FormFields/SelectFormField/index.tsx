@@ -4,10 +4,6 @@ import styled from "styled-components";
 import { MenuItem, TextField } from "@material-ui/core";
 import { TextFieldWrapper } from "../TextFormField";
 
-const SelectFormRootContainer = styled.div`
-  width: 250px;
-`;
-
 const SelectFormField = ({
   formFieldType,
   helperText,

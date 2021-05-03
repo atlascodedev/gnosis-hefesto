@@ -1,4 +1,4 @@
-import { Button, Fade, SvgIcon, Tooltip, Zoom } from "@material-ui/core";
+import { Button, SvgIcon, Tooltip } from "@material-ui/core";
 import { ArrowBackRounded } from "@material-ui/icons";
 import React from "react";
 import { connect, ConnectedProps } from "react-redux";

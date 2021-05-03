@@ -1,5 +1,5 @@
 import React, { forwardRef } from "react";
-import MaterialTable, { MaterialTableProps } from "material-table";
+import MaterialTable from "material-table";
 import AddBox from "@material-ui/icons/AddBox";
 import ArrowDownward from "@material-ui/icons/ArrowDownward";
 import Check from "@material-ui/icons/Check";
@@ -20,7 +20,6 @@ import Delete from "@material-ui/icons/Delete";
 import Save from "@material-ui/icons/Save";
 import { useDispatch } from "react-redux";
 import { globalNotificationCustom } from "../../../redux/globalUI/actions";
-import { useLocation, useNavigate } from "@reach/router";
 import { DatagridColumns } from "../../DataCreation";
 import FeedbackDialog from "../../Util/FeedbackDialog";
 

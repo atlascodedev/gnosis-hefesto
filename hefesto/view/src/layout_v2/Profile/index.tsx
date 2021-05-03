@@ -8,35 +8,11 @@ import {
 import React from "react";
 import { connect, ConnectedProps } from "react-redux";
 import styled from "styled-components";
-import { RootState } from "../../redux";
-import { logoutUser } from "../../redux/authentication/actions";
 import AvatarChangePicture from "./AvatarChangePicture";
 
 interface UserProfileButtonRootProps {
   imgURL?: string;
 }
-
-const UserProfileButtonRoot = styled.div<UserProfileButtonRootProps>`
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  background: #ffffff;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  background-image: ${(props) => `url(${props.imgURL})`};
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 5px;
-  cursor: pointer;
-
-  .profileDialogTitle {
-    font-family: ${(props) => props.theme.typography.fontFamily};
-  }
-
-  @media (min-width: 1024px) {
-    width: 35px;
-    height: 35px;
-  }
-`;
 
 const DialogContainer = styled.div``;
 
