@@ -73,6 +73,18 @@ const ImageFieldComponentFieldDescription = styled(motion.div)`
   padding-bottom: 5px;
 `;
 
+const ImageFieldOuterContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .imageFieldLabel {
+    font-size: 1rem;
+    color: #949494;
+    margin-bottom: 15px;
+  }
+`;
+
 const imageFieldContainer: Variants = {
   initial: {
     x: window.innerWidth > 1024 ? "-100%" : 0,
@@ -126,86 +138,89 @@ const ImageFieldComponentBase = ({
   };
 
   return (
-    <ImageFieldComponentRoot>
-      <ImageFieldComponentBox validImage={validURL(value?.["imageURL"])}>
-        <ImageFieldComponentBoxIcon
-          onClick={handleVisible}
-          variants={photoCameraVariants}
-          initial={"initial"}
-          whileHover="hover"
-          whileTap="pressed"
-        >
-          <SvgIcon component={PhotoCamera} />
-        </ImageFieldComponentBoxIcon>
+    <ImageFieldOuterContainer>
+      <div className="imageFieldLabel">{label}</div>
+      <ImageFieldComponentRoot>
+        <ImageFieldComponentBox validImage={validURL(value?.["imageURL"])}>
+          <ImageFieldComponentBoxIcon
+            onClick={handleVisible}
+            variants={photoCameraVariants}
+            initial={"initial"}
+            whileHover="hover"
+            whileTap="pressed"
+          >
+            <SvgIcon component={PhotoCamera} />
+          </ImageFieldComponentBoxIcon>
 
-        <ImageFieldComponentBoxImage
-          validImage={validURL(value?.["imageURL"])}
-          src={validURL(value?.["imageURL"]) ? value?.["imageURL"] : ""}
-        />
-      </ImageFieldComponentBox>
-      <ImageFieldComponentFieldContainer
-        variants={imageFieldContainer}
-        initial="initial"
-        animate={visible ? "open" : "initial"}
-      >
-        <ImageFieldComponentFieldURL>
-          <TextField
-            InputProps={{
-              endAdornment: (
-                <InputAdornment position="end">
-                  <Tooltip title="Utilize a galeria disponibilizada neste app para fazer upload de imagens para a nuvem e então selecione seu link para preencher este campo">
-                    <SvgIcon
-                      style={{
-                        cursor: "pointer",
-                        fill: "#575757",
-                        fontSize: "1.25em",
-                      }}
-                      component={Info}
-                    />
-                  </Tooltip>
-                </InputAdornment>
-              ),
-            }}
-            variant="outlined"
-            name={`${name?.toString()}.imageURL`}
-            value={value?.["imageURL"] ?? ""}
-            onChange={changeFn}
-            onBlur={blurFn}
-            label={"Link da imagem"}
-            error={error}
-            helperText={helperText?.["imageURL"]}
+          <ImageFieldComponentBoxImage
+            validImage={validURL(value?.["imageURL"])}
+            src={validURL(value?.["imageURL"]) ? value?.["imageURL"] : ""}
           />
-        </ImageFieldComponentFieldURL>
-        <ImageFieldComponentFieldDescription>
-          <TextField
-            InputProps={{
-              endAdornment: (
-                <InputAdornment position="end">
-                  <Tooltip title="Descreva sua imagem para melhor a acessibilidade de seus usuários/clientes e aumentar seu SEO">
-                    <SvgIcon
-                      style={{
-                        cursor: "pointer",
-                        fill: "#575757",
-                        fontSize: "1.25em",
-                      }}
-                      component={Info}
-                    />
-                  </Tooltip>
-                </InputAdornment>
-              ),
-            }}
-            onBlur={blurFn}
-            helperText={helperText?.["imageDescription"]}
-            error={error}
-            onChange={changeFn}
-            name={`${name?.toString()}.imageDescription`}
-            value={value?.["imageDescription"] ?? ""}
-            variant="outlined"
-            label={"Descrição da imagem"}
-          />
-        </ImageFieldComponentFieldDescription>
-      </ImageFieldComponentFieldContainer>
-    </ImageFieldComponentRoot>
+        </ImageFieldComponentBox>
+        <ImageFieldComponentFieldContainer
+          variants={imageFieldContainer}
+          initial="initial"
+          animate={visible ? "open" : "initial"}
+        >
+          <ImageFieldComponentFieldURL>
+            <TextField
+              InputProps={{
+                endAdornment: (
+                  <InputAdornment position="end">
+                    <Tooltip title="Utilize a galeria disponibilizada neste app para fazer upload de imagens para a nuvem e então selecione seu link para preencher este campo">
+                      <SvgIcon
+                        style={{
+                          cursor: "pointer",
+                          fill: "#575757",
+                          fontSize: "1.25em",
+                        }}
+                        component={Info}
+                      />
+                    </Tooltip>
+                  </InputAdornment>
+                ),
+              }}
+              variant="outlined"
+              name={`${name?.toString()}.imageURL`}
+              value={value?.["imageURL"] ?? ""}
+              onChange={changeFn}
+              onBlur={blurFn}
+              label={"Link da imagem"}
+              error={error}
+              helperText={helperText?.["imageURL"]}
+            />
+          </ImageFieldComponentFieldURL>
+          <ImageFieldComponentFieldDescription>
+            <TextField
+              InputProps={{
+                endAdornment: (
+                  <InputAdornment position="end">
+                    <Tooltip title="Descreva sua imagem para melhor a acessibilidade de seus usuários/clientes e aumentar seu SEO">
+                      <SvgIcon
+                        style={{
+                          cursor: "pointer",
+                          fill: "#575757",
+                          fontSize: "1.25em",
+                        }}
+                        component={Info}
+                      />
+                    </Tooltip>
+                  </InputAdornment>
+                ),
+              }}
+              onBlur={blurFn}
+              helperText={helperText?.["imageDescription"]}
+              error={error}
+              onChange={changeFn}
+              name={`${name?.toString()}.imageDescription`}
+              value={value?.["imageDescription"] ?? ""}
+              variant="outlined"
+              label={"Descrição da imagem"}
+            />
+          </ImageFieldComponentFieldDescription>
+        </ImageFieldComponentFieldContainer>
+      </ImageFieldComponentRoot>
+    </ImageFieldOuterContainer>
   );
 };
 

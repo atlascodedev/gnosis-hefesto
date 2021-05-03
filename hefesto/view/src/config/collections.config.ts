@@ -2,7 +2,7 @@ import { DashboardItem } from "@hefesto/types";
 
 const cardCollection: DashboardItem = {
   showID: true,
-  collectionRef: "cartas",
+  collectionRef: "Cursos",
   itemID: "cartas_id",
   itemCategory: "creation",
   sidebarIcon: "CardTravel",
@@ -10,81 +10,79 @@ const cardCollection: DashboardItem = {
   sidebarLabel: "Cartas contempladas",
   hasAttributes: false,
   hasCategories: false,
-  fieldGroups: [
-    { id: "adminGroup", label: "Administradora" },
-    { id: "infoGroup", label: "Informações" },
-    { id: "privateGroup", label: "Campos privados" },
-  ],
+  fieldGroups: [{ id: "infoGroup", label: "Informações" }],
   fields: [
     {
-      groupID: "privateGroup",
-      fieldType: "text",
-      hidden: true,
-      label: "Anotações sobre a carta",
-      name: "cardNotes",
-      private: true,
-      required: false,
+      groupID: "infoGroup",
+      fieldType: "string",
+      label: "Nome do curso",
+      name: "courseName",
     },
 
     {
-      groupID: "adminGroup",
+      groupID: "infoGroup",
       fieldType: "string",
-      label: "Nome da administradora",
-      name: "administradora",
+      label: "Duração do curso",
+      name: "courseDuration",
     },
+
     {
       groupID: "infoGroup",
       fieldType: "select",
-      selectOptions: ["Imóvel", "Automóvel"],
-      label: "Tipo de carta",
-      name: "cardType",
-    },
-    {
-      groupID: "infoGroup",
-      fieldType: "money",
-      label: "Valor do crédito",
-      name: "cardValor",
-    },
-    {
-      groupID: "infoGroup",
-      fieldType: "money",
-      label: "Entrada",
-      name: "cardEntrada",
+      selectOptions: ["Graduação", "Pós-graduação", "Extensão"],
+      label: "Nível do curso",
+      name: "courseLevel",
     },
 
     {
       groupID: "infoGroup",
-      fieldType: "boolean",
-      label: "Alerta de boa oferta",
-      name: "cardDestaque",
-      hidden: true,
-    },
-    {
-      groupID: "infoGroup",
-      fieldType: "boolean",
-      label: "Situação da carta",
-      name: "cardSituation",
-      hidden: true,
-    },
-
-    {
-      groupID: "infoGroup",
-      fieldType: "date",
-      label: "Vencimento",
-      hidden: true,
-      name: "cardExpire",
-    },
-
-    {
-      groupID: "infoGroup",
-      fieldType: "installment",
-      label: "Parcelas",
-      name: "cardInstallment",
+      fieldType: "list",
+      label: "Matriz curricular",
+      name: "courseSyllabus",
       hidden: true,
       listOptions: {
-        fieldLabel: "Saldo",
-        label: "Saldo",
+        fieldLabel: "Nome da máteria",
+        label: "Matriz curricular",
       },
+    },
+
+    {
+      groupID: "infoGroup",
+      fieldType: "text",
+      label: "Descrição do curso",
+      name: "courseDescription",
+      hidden: true,
+    },
+
+    {
+      groupID: "infoGroup",
+      fieldType: "string",
+      label: "Área do curso",
+      name: "courseArea",
+    },
+
+    {
+      groupID: "infoGroup",
+      fieldType: "image",
+      label: "Foto para página do curso",
+      name: "courseImage",
+      hidden: true,
+    },
+
+    {
+      groupID: "infoGroup",
+      fieldType: "image",
+      label: "Foto do certificado de E-MEC",
+      name: "courseEmecPicture",
+      hidden: true,
+    },
+
+    {
+      groupID: "infoGroup",
+      fieldType: "string",
+      label: "Link para página de certificado de E-MEC",
+      name: "courseEmecURL",
+      hidden: true,
     },
   ],
 };
