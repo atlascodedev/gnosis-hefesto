@@ -1,14 +1,19 @@
 {
   "compileOnSave": true,
-
   "compilerOptions": {
-    "module": "commonjs",
+    "pretty": true,
+    "module": "CommonJS",
     "outDir": "dist",
     "sourceMap": true,
     "strict": true,
     "target": "es2017",
+    "allowJs": true,
+    "forceConsistentCasingInFileNames": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "esModuleInterop": true,
     "moduleResolution": "node"
   },
-  "include": ["src"]
+  "include": ["src"],
+  "exclude": ["node_modules"]
 }

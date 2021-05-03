@@ -1,6 +1,6 @@
 import { SeverityLevel } from "@hefesto/types";
 import chalk from "chalk";
-const logSymbols = require("log-symbols");
+import logSymbols from "../logSymbols/index";
 
 const enhancedLog = (
   message: string,
