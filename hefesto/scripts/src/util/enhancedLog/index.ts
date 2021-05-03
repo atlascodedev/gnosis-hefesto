@@ -1,6 +1,6 @@
 import { SeverityLevel } from "@hefesto/types";
 import chalk from "chalk";
-import logSymbols from "log-symbols";
+const logSymbols = require("log-symbols");
 
 const enhancedLog = (
   message: string,
@@ -36,3 +36,5 @@ const enhancedLog = (
     `${symbol} ${chalk.bgHex(backgroundColor).hex(color)(label)}: ${message}`
   );
 };
+
+export default enhancedLog;
