@@ -3,7 +3,6 @@
   "include": ["src"],
   "compilerOptions": {
     "target": "es5",
-    "moduleResolution": "node",                                
     "module": "commonjs",                           
     "outDir": "dist",                              
     "strict": true,                                 /* Enable all strict type-checking options. */

@@ -5,7 +5,8 @@
     "declaration": true,
     "moduleResolution": "node",
     "declarationMap": true,
-    "target": "es5",                                
+    "target": "es5", 
+                                   
     "module": "commonjs",                           
     "outDir": "dist",                              
     "strict": true,                                 /* Enable all strict type-checking options. */
