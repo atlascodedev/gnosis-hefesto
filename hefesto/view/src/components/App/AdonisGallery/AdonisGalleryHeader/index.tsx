@@ -1,7 +1,7 @@
 import React, { HtmlHTMLAttributes } from "react";
 import { useDispatch } from "react-redux";
 import styled from "styled-components";
-import { AdonisImage } from "../../../../config/adonis.config";
+import { AdonisImage } from "@hefesto/types";
 import convertBase64 from "../../../../helper/converFileUploadToBase64";
 import {
   deleteImage,

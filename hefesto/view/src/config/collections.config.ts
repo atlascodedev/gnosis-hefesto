@@ -1,16 +1,4 @@
-import {
-  IconTypes,
-  FormFieldTypes,
-  FieldGroup,
-  RadioField,
-  CheckboxField,
-  DashboardItemRoot,
-  DashboardItemCategory,
-  DataCreationField,
-  ListFieldOptions,
-  DataCreationItem,
-  DashboardItem,
-} from "@hefesto/types";
+import { DashboardItem } from "@hefesto/types";
 
 const cardCollection: DashboardItem = {
   showID: true,

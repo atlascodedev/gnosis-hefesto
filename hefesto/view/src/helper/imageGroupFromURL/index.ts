@@ -1,4 +1,4 @@
-  import { AdonisOrderedTriple } from "../../config/adonis.config";
+import { AdonisOrderedTriple } from "@hefesto/types";
 import { storage } from "../../firebase";
 
 const imageGroupFromURL = async (

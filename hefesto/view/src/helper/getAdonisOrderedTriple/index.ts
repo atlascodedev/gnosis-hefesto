@@ -1,4 +1,5 @@
-import { adonisConfig, AdonisOrderedTriple } from "../../config/adonis.config";
+import { adonisConfig } from "@hefesto/configuration";
+import { AdonisOrderedTriple } from "@hefesto/types";
 
 const getAdonisOrderedTriple = (
   fileName: string,

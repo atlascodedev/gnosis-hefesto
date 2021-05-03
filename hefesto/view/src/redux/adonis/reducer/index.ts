@@ -1,7 +1,4 @@
-import {
-  AdonisImage,
-  AdonisOrderedTriple,
-} from "../../../config/adonis.config";
+import { AdonisImage, AdonisOrderedTriple } from "@hefesto/types";
 import {
   AdonisGalleryState,
   AdonisActionTypes,

@@ -25,11 +25,8 @@ import {
 } from "../types";
 import Axios, { AxiosResponse } from "axios";
 import { storage } from "../../../firebase";
-import {
-  adonisConfig,
-  AdonisImage,
-  AdonisOrderedTriple,
-} from "../../../config/adonis.config";
+import { adonisConfig } from "@hefesto/configuration";
+import { AdonisImage, AdonisOrderedTriple } from "@hefesto/types";
 import getAdonisOrderedTriple from "../../../helper/getAdonisOrderedTriple";
 
 export const galleryClose = (): SetAdonisGalleryComponentActionTypes => {
