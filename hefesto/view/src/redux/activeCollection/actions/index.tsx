@@ -5,12 +5,8 @@ import { RootStateOrAny } from "react-redux";
 import { Action } from "redux";
 import { ThunkAction } from "redux-thunk";
 import { RootState } from "../..";
-import {
-  Category,
-  collections,
-  DashboardItem,
-  DataCreationField,
-} from "../../../config/collections.config";
+import { collections } from "../../../config/collections.config";
+import { Category, DashboardItem, DataCreationField } from "@hefesto/types";
 import { db } from "../../../firebase";
 import { categoryLabelFromUUIDPath } from "../../../helper/cateroyLabelFromUUIDPath";
 import converToSlug from "../../../helper/convertToSlug";

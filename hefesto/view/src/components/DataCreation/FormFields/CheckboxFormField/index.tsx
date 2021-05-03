@@ -5,7 +5,7 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import FormControl from "@material-ui/core/FormControl";
 import FormLabel from "@material-ui/core/FormLabel";
 import { FormFieldComponentProps } from "../Root";
-import { CheckboxField } from "../../../../config/collections.config";
+import { CheckboxField } from "@hefesto/types";
 import { FormHelperText } from "@material-ui/core";
 
 const CheckboxFormField = ({

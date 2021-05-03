@@ -3,7 +3,7 @@ import React from "react";
 import { IconDictonary } from "../../../dictionaries";
 import styled from "styled-components";
 import { setTimeout } from "timers";
-import { IconTypes } from "../../../dictionaries/types";
+import { IconTypes } from "@hefesto/types";
 
 const IconHelperRoot = styled.div`
   width: 220px;

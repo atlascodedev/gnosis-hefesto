@@ -1,5 +1,5 @@
 import React from "react";
-import { DataCreationField, FieldGroup } from "../../config/collections.config";
+import { DataCreationField, FieldGroup } from "@hefesto/types";
 import { useAppSelector } from "../useAppSelector";
 
 const useFieldGrouping = (

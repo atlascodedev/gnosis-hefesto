@@ -9,7 +9,7 @@ import { Person } from "@material-ui/icons";
 import styled from "styled-components";
 import React from "react";
 import IconComponent from "../../components/Util/IconComponent";
-import { DataCreationItem } from "../../config/collections.config";
+import { DataCreationItem } from "@hefesto/types";
 import getCurrentPath from "../../helper/currentPath";
 import { Link } from "@reach/router";
 import { basePath, dashboardPath } from "../../config/routes.config";

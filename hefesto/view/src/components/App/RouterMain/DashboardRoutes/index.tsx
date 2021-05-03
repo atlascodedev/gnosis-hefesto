@@ -1,10 +1,7 @@
 import { RouteComponentProps, Router, useNavigate } from "@reach/router";
 import React from "react";
 import AdminRoute from "../AdminRoute";
-import {
-  collections,
-  DataCreationItem,
-} from "../../../../config/collections.config";
+import { DataCreationItem } from "@hefesto/types";
 import AdonisGallery from "../../AdonisGallery";
 import Toolbox from "../../Toolbox";
 import ColorPicker from "../../ColorPicker";
@@ -14,6 +11,7 @@ import EntryView from "../../../DataCreation/EntryView";
 import { useAppSelector } from "../../../../hooks/useAppSelector";
 import AppLayout from "../../../../layout_v2/Main";
 import useReferenceSize from "../../../../hooks/useReferenceSize";
+import { collections } from "../../../../config/collections.config";
 
 interface Props extends RouteComponentProps {}
 
@@ -22,9 +20,8 @@ const DashboardRoutes = ({ location, navigate, path, uri }: Props) => {
     (state) => state.activeCollection
   );
 
-
   return (
-    <div >
+    <div>
       <AdonisGallery />
       <Toolbox />
       <ColorPicker />

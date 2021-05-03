@@ -3,7 +3,7 @@ import { Dispatch } from "react";
 import { Action } from "redux";
 import { ThunkAction } from "redux-thunk";
 import { RootState } from "../..";
-import { Category } from "../../../config/collections.config";
+import { Category } from "@hefesto/types";
 import { db } from "../../../firebase";
 import {
   CategoryDraftChangeFieldActionTypes,

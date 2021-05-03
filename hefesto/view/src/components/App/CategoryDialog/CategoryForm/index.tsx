@@ -2,7 +2,7 @@ import { Fade, MenuItem, TextField } from "@material-ui/core";
 import React from "react";
 import * as Yup from "yup";
 import styled from "styled-components";
-import { Category } from "../../../../config/collections.config";
+import { Category } from "@hefesto/types";
 
 import {
   CategoryDraftChangeField,

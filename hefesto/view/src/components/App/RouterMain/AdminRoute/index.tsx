@@ -1,11 +1,8 @@
 import { Redirect, RouteComponentProps, useNavigate } from "@reach/router";
 import React, { Suspense } from "react";
 import { connect, ConnectedProps } from "react-redux";
-import {
-  collections,
-  DashboardItem,
-  DashboardItemCategory,
-} from "../../../../config/collections.config";
+import { DashboardItem, DashboardItemCategory } from "@hefesto/types";
+import { collections } from "../../../../config/collections.config";
 import { loginRedirect } from "../../../../config/routes.config";
 import { RootState } from "../../../../redux";
 import { setupActiveCollection } from "../../../../redux/activeCollection/actions";

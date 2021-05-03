@@ -34,8 +34,11 @@ import {
   SubdirectoryArrowRight,
 } from "@material-ui/icons";
 
-import { FormFieldTypes, IconTypes } from "./types";
-import { DashboardItemCategory } from "../config/collections.config";
+import {
+  FormFieldTypes,
+  IconTypes,
+  DashboardItemCategory,
+} from "@hefesto/types";
 import DataCreation from "../components/DataCreation";
 import DataVisualization from "../components/DataVisualization";
 import React from "react";

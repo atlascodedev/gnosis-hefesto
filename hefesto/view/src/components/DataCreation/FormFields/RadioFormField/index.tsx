@@ -3,7 +3,7 @@ import { withStyles } from "@material-ui/core/styles";
 import { green } from "@material-ui/core/colors";
 import Radio, { RadioProps } from "@material-ui/core/Radio";
 import { FormFieldComponentProps } from "../Root";
-import { RadioField } from "../../../../config/collections.config";
+import { RadioField } from "@hefesto/types";
 import {
   FormControl,
   FormControlLabel,

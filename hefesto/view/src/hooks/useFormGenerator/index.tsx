@@ -1,8 +1,5 @@
 import { FormikContextType, useFormik } from "formik";
-import {
-  AttributeCollectionField,
-  DataCreationField,
-} from "../../config/collections.config";
+import { AttributeCollectionField, DataCreationField } from "@hefesto/types";
 import * as Yup from "yup";
 import React from "react";
 import { useAppSelector } from "../useAppSelector";

@@ -1,10 +1,8 @@
 import { Fade } from "@material-ui/core";
 import React from "react";
 import { connect, ConnectedProps } from "react-redux";
-import {
-  AttributeCollectionField,
-  collections,
-} from "../../../config/collections.config";
+import { AttributeCollectionField } from "@hefesto/types";
+import { collections } from "../../../config/collections.config";
 import { RootState } from "../../../redux";
 import { AttributeSelectGridContainer, AttributeSelectLayout } from "./styles";
 

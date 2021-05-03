@@ -1,9 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { motion, Variants } from "framer-motion";
-import { DashboardItem } from "../../config/collections.config";
 import IconComponent from "../../components/Util/IconComponent";
-import { IconTypes } from "../../dictionaries/types";
+import { IconTypes, DashboardItem } from "@hefesto/types";
 import { Fade, SvgIcon, SvgIconTypeMap, Tooltip } from "@material-ui/core";
 import {
   Autorenew,

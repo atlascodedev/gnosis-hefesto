@@ -1,5 +1,5 @@
 import React from "react";
-import { DashboardItemCategory } from "../../../config/collections.config";
+import { DashboardItemCategory } from "@hefesto/types";
 import { DashboardItemDictionary } from "../../../dictionaries";
 
 interface Props {

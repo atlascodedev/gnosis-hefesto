@@ -1,6 +1,7 @@
 import { AdonisConfig, adonisConfig } from "./adonis.config";
 import { BrandingConfig, brandingConfig } from "./branding.config";
-import { collections, DataCreationItem } from "./collections.config";
+import { collections } from "./collections.config";
+import { DataCreationItem } from "@hefesto/types";
 
 export interface AppConfig {
   branding: BrandingConfig;

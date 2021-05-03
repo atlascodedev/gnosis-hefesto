@@ -1,10 +1,7 @@
 import { Fade } from "@material-ui/core";
 import { FormikContextType } from "formik";
 import React from "react";
-import {
-  DataCreationField,
-  FieldGroup,
-} from "../../../../config/collections.config";
+import { DataCreationField, FieldGroup } from "@hefesto/types";
 import AttributeSelect from "../../../App/AttributeSelect";
 import CategorySelect from "../../../App/CategorySelect";
 import AccordionGroup from "../../../Util/AccordionGroup";

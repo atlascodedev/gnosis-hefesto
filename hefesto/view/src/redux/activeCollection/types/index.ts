@@ -1,4 +1,4 @@
-import { Category, DashboardItem } from "../../../config/collections.config";
+import { Category, DashboardItem } from "@hefesto/types";
 
 export const ACTIVE_COLLECTION_ENTRY_UPDATE_START =
   "ACTIVE_COLLECTION_ENTRY_UPDATE_START";

@@ -1,8 +1,5 @@
-import {
-  collections,
-  DataCreationField,
-  DataCreationItem,
-} from "../../config/collections.config";
+import { collections } from "../../config/collections.config";
+import { DataCreationItem, DataCreationField } from "@hefesto/types";
 import { DatagridColumns } from "../../components/DataCreation";
 import EntryViewActionButtonMain from "../../components/DataCreation/EntryView/EntryViewAction";
 

@@ -1,11 +1,11 @@
 import React from "react";
 import {
+  FormFieldTypes,
   CheckboxField,
   ListFieldOptions,
   RadioField,
-} from "../../../../config/collections.config";
+} from "@hefesto/types";
 import { FormFieldDictionary } from "../../../../dictionaries";
-import { FormFieldTypes } from "../../../../dictionaries/types";
 
 interface RootFormFieldProps {
   formFieldType: FormFieldTypes;

@@ -1,6 +1,6 @@
 import React from "react";
 import { CategoryMaterializedPair } from "../../components/App/CategorySelect";
-import { Category } from "../../config/collections.config";
+import { Category } from "@hefesto/types";
 import { useAppSelector } from "../useAppSelector";
 
 const useCategoryHierarchy = (): {

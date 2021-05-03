@@ -1,4 +1,4 @@
-import { Category } from "../../config/collections.config";
+import { Category } from "@hefesto/types";
 
 export const categoryLabelFromUUIDPath = (
   uuid_path: string[],

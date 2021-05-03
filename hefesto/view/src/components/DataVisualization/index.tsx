@@ -1,7 +1,6 @@
 import React from "react";
 import { connect, ConnectedProps } from "react-redux";
-import { DataCreationField } from "../../config/collections.config";
-import { FormFieldTypes } from "../../dictionaries/types";
+import { FormFieldTypes, DataCreationField } from "@hefesto/types";
 import useFieldGrouping from "../../hooks/useFieldGrouping";
 import useFormGenerator from "../../hooks/useFormGenerator";
 import { RootState } from "../../redux";
