@@ -9,5 +9,8 @@
     "build:hefesto": "lerna run build --stream --scope={@hefesto/server,@hefesto/scripts,@hefesto/configuration,@hefesto/view}",
     "tsc:hefesto": "lerna run build --parallel --scope={@hefesto/server,@hefesto/scripts,@hefesto/configuration}",
     "watch:hefesto": "lerna run dev --parallel --scope={@hefesto/server,@hefesto/scripts,@hefesto/configuration}"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0"
   }
 }

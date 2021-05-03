@@ -1,6 +1,19 @@
 import { SeverityLevel } from "@hefesto/types";
 import chalk from "chalk";
-import logSymbols from "../logSymbols/index";
+
+const main = {
+  info: chalk.blue("ℹ"),
+  success: chalk.green("✔"),
+  warning: chalk.yellow("⚠"),
+  error: chalk.red("✖"),
+};
+
+const fallback = {
+  info: chalk.blue("i"),
+  success: chalk.green("√"),
+  warning: chalk.yellow("‼"),
+  error: chalk.red("×"),
+};
 
 const enhancedLog = (
   message: string,
@@ -14,22 +27,22 @@ const enhancedLog = (
   switch (severity) {
     case "success":
       backgroundColor = "#4caf50";
-      symbol = logSymbols.success;
+      symbol = "✔";
       break;
 
     case "error":
       backgroundColor = "#f44336";
-      symbol = logSymbols.error;
+      symbol = "✖";
       break;
 
     case "info":
       backgroundColor = "#2196f3";
-      symbol = logSymbols.info;
+      symbol = "ℹ";
       break;
 
     case "warning":
       backgroundColor = "#ff9800";
-      symbol = logSymbols.warning;
+      symbol = "⚠";
   }
 
   console.log(
