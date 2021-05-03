@@ -2,12 +2,12 @@ import { DashboardItem } from "@hefesto/types";
 
 const cardCollection: DashboardItem = {
   showID: true,
-  collectionRef: "Cursos",
-  itemID: "cartas_id",
+  collectionRef: "courses",
+  itemID: "courses_id",
   itemCategory: "creation",
   sidebarIcon: "CardTravel",
-  routerPath: "cartas",
-  sidebarLabel: "Cartas contempladas",
+  routerPath: "cursos",
+  sidebarLabel: "Cursos",
   hasAttributes: false,
   hasCategories: false,
   fieldGroups: [{ id: "infoGroup", label: "Informações" }],

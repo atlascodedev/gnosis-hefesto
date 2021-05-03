@@ -22,5 +22,6 @@ export default {
   // # Branding Configuration
   companyName: "AtlasCode",
   companyWebsite: "https://atlascode.dev",
-  logoUrl: "https://i.imgur.com/9npexxg.png",
+  logoUrl:
+    "https://firebasestorage.googleapis.com/v0/b/atlas-ares.appspot.com/o/adonis%2Fgallery%2Flogo-gnosis-use.webp?alt=media",
 };

@@ -2,6 +2,7 @@ import React from "react";
 import { collections } from "../../config/collections.config";
 import { AppLayoutRoot } from "../styles";
 import logo from "../../images/logo.svg";
+import { brandingConfig } from "@hefesto/configuration";
 import { RootState } from "../../redux";
 import { connect, ConnectedProps } from "react-redux";
 import { logoutUser } from "../../redux/authentication/actions";
@@ -17,7 +18,7 @@ const AppLayout = ({ children, activeCollectionLabel, logoutFn }: Props) => {
       <AppLayoutRoot
         logoutFn={logoutFn}
         label={activeCollectionLabel}
-        logo={logo}
+        logo={brandingConfig.logoUrl as string}
         sidebarItems={collections}
       >
         {children}

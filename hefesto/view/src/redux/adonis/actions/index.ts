@@ -169,7 +169,7 @@ export const uploadAndOptimizeImage = (
     let requestURL: string;
 
     if (process.env.NODE_ENV !== "production") {
-      requestURL = `http://localhos:5001/${firebaseConfig.projectId}/${firebaseConfig.locationId}1/api/adonis/optimize`;
+      requestURL = `http://localhost:5001/${firebaseConfig.projectId}/${firebaseConfig.locationId}1/api/adonis/optimize`;
     } else {
       requestURL = `https://${firebaseConfig.locationId}1-${firebaseConfig.projectId}.cloudfunctions.net/api/adonis/optimize`;
     }
