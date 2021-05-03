@@ -25,7 +25,7 @@ import {
 } from "../types";
 import Axios, { AxiosResponse } from "axios";
 import { storage } from "../../../firebase";
-import { adonisConfig } from "@hefesto/configuration";
+import { adonisConfig, firebaseConfig } from "@hefesto/configuration";
 import { AdonisImage, AdonisOrderedTriple } from "@hefesto/types";
 import getAdonisOrderedTriple from "../../../helper/getAdonisOrderedTriple";
 
@@ -169,11 +169,9 @@ export const uploadAndOptimizeImage = (
     let requestURL: string;
 
     if (process.env.NODE_ENV !== "production") {
-      requestURL =
-        "http://localhost:5001/portalbens-nextjs-hefesto/us-central1/api/adonis/optimize";
+      requestURL = `http://localhos:5001/${firebaseConfig.projectId}/${firebaseConfig.locationId}1/api/adonis/optimize`;
     } else {
-      requestURL =
-        "https://us-central1-portalbens-nextjs-hefesto.cloudfunctions.net/api/adonis/optimize";
+      requestURL = `https://${firebaseConfig.locationId}1-${firebaseConfig.projectId}.cloudfunctions.net/api/adonis/optimize`;
     }
 
     Axios.post<AdonisImage, AxiosResponse<AdonisImage>>(requestURL, {

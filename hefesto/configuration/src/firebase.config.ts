@@ -8,4 +8,5 @@ export const firebaseConfig = {
   messagingSenderId: envinronment.FIREBASE_MESSAGING_SENDER_ID,
   appId: envinronment.FIREBASE_APP_ID,
   measurementId: envinronment.FIREBASE_MEASUREMENT_ID,
+  locationId: envinronment.FIREBASE_LOCATION_ID,
 };

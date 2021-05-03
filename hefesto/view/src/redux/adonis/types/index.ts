@@ -1,4 +1,4 @@
-import { AdonisImage, AdonisOrderedTriple } from "@hefesto/types";
+import { AdonisImage } from "@hefesto/types";
 
 export const SET_ADONIS_GALLERY_OPEN = "SET_ADONIS_GALLERY_OPEN";
 export const SET_ADONIS_GALLERY_CLOSE = "SET_ADONIS_GALLERY_CLOSE";
