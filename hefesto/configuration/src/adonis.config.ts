@@ -1,19 +1,16 @@
-import {AdonisConfig, AdonisImage, AdonisPath} from '@hefesto/types'
+import { AdonisConfig, AdonisImage, AdonisPath } from "@hefesto/types";
+import coreConfig from "./core.config";
 
+export const adonisConfig: AdonisConfig = {
+  path: {
+    rootFolder: coreConfig.ADONIS_ROOT_FOLDER,
+    gallery: coreConfig.ADONIS_FULL_IMAGE_FOLDER,
+    galleryThumbnail: coreConfig.ADONIS_THUMBNAIL_IMAGE_FOLDER,
+    galleryThumbnailBlur: coreConfig.ADONIS_THUMBNAIL_BLUR_IMAGE_FOLDER,
+  },
+  createBlur: true,
+  storageBucketPath: coreConfig.FIREBASE_STORAGE_BUCKET,
+  baseCloudURL: coreConfig.FIREBASE_STORAGE_BASE_URL,
+};
 
-  export const adonisImagePath: AdonisPath = {
-    rootFolder: "adonis",
-    gallery: "gallery",
-    galleryThumbnail: "gallery_thumbnail",
-    galleryThumbnailBlur: "gallery_thumbnail_blur",
-  };
-  
-  export const adonisConfig: AdonisConfig = {
-    path: adonisImagePath,
-    createBlur: true,
-    storageBucketPath: "portalbens-nextjs-hefesto.appspot.com",
-    baseCloudURL: "https://firebasestorage.googleapis.com/v0/b/",
-  };
-  
-  // DONT FORGET TO REPLICATE CHANGES HERE AT THE ADONIS.CONFIG.TS FILE INSIDE THE ./FUNCTIONS/SRC/CONFIG/
-  
+// DONT FORGET TO REPLICATE CHANGES HERE AT THE ADONIS.CONFIG.TS FILE INSIDE THE ./FUNCTIONS/SRC/CONFIG/

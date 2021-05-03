@@ -24,3 +24,8 @@ export interface AdonisConfig {
 }
 
 export type SeverityLevel = "success" | "error" | "warning" | "info";
+export type BrandingConfig = {
+  companyName: string | null;
+  companyWebsite: string | null;
+  logoUrl: string | null;
+};
