@@ -1,15 +1,15 @@
 export default {
   // # Firebase Config
 
-  FIREBASE_PROJECT_ID: "atlas-ares",
-  FIREBASE_APP_ID: "1:724730844722:web:a3862389b0782303d94e2b",
-  FIREBASE_DATABASE_URL: "https://atlas-ares-default-rtdb.firebaseio.com",
-  FIREBASE_STORAGE_BUCKET: "atlas-ares.appspot.com",
-  FIREBASE_LOCATION_ID: "us-central",
-  FIREBASE_API_KEY: "AIzaSyDKL_din07GXH71mIO9iXzp95ZHkjoMcNw",
-  FIREBASE_AUTH_DOMAIN: "atlas-ares.firebaseapp.com",
-  FIREBASE_MESSAGING_SENDER_ID: "724730844722",
-  FIREBASE_MEASUREMENT_ID: "G-409Y0SYD03",
+  FIREBASE_PROJECT_ID: "gnosis-webapp",
+  FIREBASE_APP_ID: "1:832655236514:web:af31450870ee8d11eaa6fb",
+  FIREBASE_DATABASE_URL: "https://gnosis-webapp.firebaseio.com",
+  FIREBASE_STORAGE_BUCKET: "gnosis-webapp.appspot.com",
+  FIREBASE_LOCATION_ID: "southamerica-east1",
+  FIREBASE_API_KEY: "AIzaSyD9ZRqGumQU0DGAuI7taI4wJTwlv6Z4TjU",
+  FIREBASE_AUTH_DOMAIN: "gnosis-webapp.firebaseapp.com",
+  FIREBASE_MESSAGING_SENDER_ID: "832655236514",
+  FIREBASE_MEASUREMENT_ID: "G-L7QHHFY7C6",
   FIREBASE_STORAGE_BASE_URL: "https://firebasestorage.googleapis.com/v0/b/",
 
   // # Adonis Configuration

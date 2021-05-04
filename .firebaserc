@@ -1,5 +1,11 @@
 {
-  "projects": {
-    "default": "atlas-ares"
+  "targets": {
+    "gnosis-webapp": {
+      "hosting": {
+        "admin": [
+          "gnosis-hefesto"
+        ]
+      }
+    }
   }
 }
