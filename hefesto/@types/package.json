@@ -2,9 +2,9 @@
   "name": "@hefesto/types",
   "version": "1.0.0",
   "description": "",
-  "main": "index.d.ts",
+  "typings": "index.d.ts",
   "author": "",
   "license": "ISC",
-  "types": "index.d.ts"
+  "files": ["index.d.ts"]
 
 }
