@@ -4,5 +4,6 @@
   "description": "",
   "main": "index.d.ts",
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "types": "index.d.ts"
 }

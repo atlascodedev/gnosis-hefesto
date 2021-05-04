@@ -11,6 +11,12 @@ export type AdonisOrderedTriple = {
   gallery_thumbnail_blur: string;
 };
 
+export type RoadmapItemType = {
+  complete: boolean;
+  label: string;
+  last?: boolean;
+};
+
 export interface AdonisImage extends AdonisOrderedTriple {
   fileName: string;
   uuid: string;

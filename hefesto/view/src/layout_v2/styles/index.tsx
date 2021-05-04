@@ -103,6 +103,8 @@ const AppSidebarBrandingLogoContainer = styled.div`
 const AppSidebarBrandingImage = styled.img`
   object-fit: contain;
   width: 40%;
+  max-width: 65px;
+  max-height: 65px;
 `;
 
 const AppLayoutUpperbar = styled.div`

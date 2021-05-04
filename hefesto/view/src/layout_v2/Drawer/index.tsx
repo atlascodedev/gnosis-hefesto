@@ -25,15 +25,15 @@ const LayoutDrawerImageContainer = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 
   img {
     width: 75%;
     padding: 10px;
     height: 75%;
-    max-width: 200px;
-    max-height: auto;
+    max-width: 100px;
+    max-height: 100px;
   }
 `;
 
@@ -48,7 +48,7 @@ const LayoutDrawer = ({ open, toggleDrawer, logo, sidebarItems }: Props) => {
         open={open}
         anchor="left"
       >
-        <List style={{ color: "#5d6d7c" }}>
+        <List style={{ color: "#5d6d7c", padding: "0px 25px" }}>
           <ListItem divider>
             <LayoutDrawerImageContainer>
               <img src={logo} alt="Logo" />

@@ -2,7 +2,7 @@ import React from "react";
 import AtlasBackdrop from "../../../components/Util/AtlasBackdrop";
 import { AppInfoLayout } from "../../styles";
 import Roadmap from "../Roadmap";
-import { RoadmapItemType } from "../RoadmapItem";
+import { RoadmapItemType } from "@hefesto/types";
 
 interface Props {
   isOpen: boolean;

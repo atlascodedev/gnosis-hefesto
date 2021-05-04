@@ -6,12 +6,7 @@ import TimelineDot from "@material-ui/lab/TimelineDot";
 import TimelineItem from "@material-ui/lab/TimelineItem";
 import TimelineSeparator from "@material-ui/lab/TimelineSeparator";
 import React from "react";
-
-export type RoadmapItemType = {
-  complete: boolean;
-  label: string;
-  last?: boolean;
-};
+import { RoadmapItemType } from "../../../../../@types";
 
 const RoadmapItem = ({
   label = "label test",
