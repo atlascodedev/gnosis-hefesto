@@ -7,10 +7,6 @@
       "esnext"
     ],
     "baseUrl": ".",
-    "paths": {
-      "config/*": ["../configuration/*"],
-      "types/*": ["../@types/index.d.ts"]
-    },
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -28,5 +24,7 @@
   "include": [
     "src"
   ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ]
 }

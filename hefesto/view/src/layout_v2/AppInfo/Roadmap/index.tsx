@@ -1,7 +1,8 @@
 import React from "react";
 import Timeline from "@material-ui/lab/Timeline";
-import RoadmapItem, { RoadmapItemType } from "../RoadmapItem";
+import RoadmapItem from "../RoadmapItem";
 import { RoadmapWrapper } from "./styles";
+import { RoadmapItemType } from "@hefesto/types";
 
 interface RoadMapProps {
   items: RoadmapItemType[];
@@ -12,7 +13,7 @@ const Roadmap = ({ items = [] }: RoadMapProps) => {
     <RoadmapWrapper>
       <Timeline align="alternate">
         {items.map((value, index) => {
-          if (index == items.length - 1) {
+          if (index === items.length - 1) {
             return (
               <RoadmapItem
                 key={index}
