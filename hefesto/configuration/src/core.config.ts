@@ -5,7 +5,7 @@ export default {
   FIREBASE_APP_ID: "1:832655236514:web:af31450870ee8d11eaa6fb",
   FIREBASE_DATABASE_URL: "https://gnosis-webapp.firebaseio.com",
   FIREBASE_STORAGE_BUCKET: "gnosis-webapp.appspot.com",
-  FIREBASE_LOCATION_ID: "southamerica-east1",
+  FIREBASE_LOCATION_ID: "us-central",
   FIREBASE_API_KEY: "AIzaSyD9ZRqGumQU0DGAuI7taI4wJTwlv6Z4TjU",
   FIREBASE_AUTH_DOMAIN: "gnosis-webapp.firebaseapp.com",
   FIREBASE_MESSAGING_SENDER_ID: "832655236514",

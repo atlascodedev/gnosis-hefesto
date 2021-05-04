@@ -2,7 +2,7 @@ import { DashboardItem } from "@hefesto/types";
 
 const cardCollection: DashboardItem = {
   showID: true,
-  collectionRef: "courses",
+  collectionRef: "coursesNew",
   itemID: "courses_id",
   itemCategory: "creation",
   sidebarIcon: "CardTravel",
@@ -88,7 +88,7 @@ const cardCollection: DashboardItem = {
 };
 
 const blogCollection: DashboardItem = {
-  collectionRef: "portalBlog",
+  collectionRef: "gnosisBlog",
   sidebarIcon: "LibraryBooks",
   routerPath: "blog",
   sidebarLabel: "Blog",
@@ -140,7 +140,7 @@ const testimonialCollection: DashboardItem = {
   showID: true,
   collectionRef: "testimonials",
   itemCategory: "creation",
-  itemID: "portalTestimonials",
+  itemID: "gnosisTestimonials",
   routerPath: "depoimentos",
   sidebarLabel: "Depoimento",
   sidebarIcon: "Group",
