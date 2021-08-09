@@ -5,7 +5,7 @@ import { nanoid } from "nanoid";
 import sharp from "sharp";
 import { Request, Response } from "express";
 import fs from "fs";
-import { adonisConfig } from "@hefesto/configuration";
+import { adonisConfig } from "../../config/adonis.config";
 import converToSlug from "../../helper/converToSlug";
 import { AdonisImage, AdonisPath } from "../../@types";
 
