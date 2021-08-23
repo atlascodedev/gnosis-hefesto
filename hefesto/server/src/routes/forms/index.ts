@@ -13,6 +13,6 @@ formsRouter.options("*", cors());
 
 formsRouter.post("/contact", cors(), saveContactFormToDatabase);
 formsRouter.post("/course-interest", cors(), saveCourseFormToDatabase);
-formsRouter.post("/newsletter-subscribe", saveNewsletterFormToDatabase);
+formsRouter.post("/newsletter-subscribe", cors(), saveNewsletterFormToDatabase);
 
 export default formsRouter;
