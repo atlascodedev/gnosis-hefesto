@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 import IconComponent from "../../components/Util/IconComponent";
 import { IconTypes, DashboardItem } from "@hefesto/types";
 import { Fade, SvgIcon, SvgIconTypeMap, Tooltip } from "@material-ui/core";
@@ -19,19 +19,20 @@ import { Link } from "@reach/router";
 import { basePath, dashboardPath } from "../../config/routes.config";
 import UserProfile from "../Profile";
 import NotificationList from "../NotificationList";
-import { remove } from "lodash";
 import AppInfo from "../AppInfo/Main";
 import hefestoLogo from "../../images/hefesto-logo.svg";
 import { OverridableComponent } from "@material-ui/core/OverridableComponent";
-import FeedbackDialog from "../../components/Util/FeedbackDialog";
 import useEnhancedDialog from "../../hooks/useEnhancedDialog";
-import axios from "axios";
 import { useAppDispatch } from "../../hooks/useAppDispatch";
 import {
   globalNotificationCustom,
   setLoadingFalse,
   setLoadingTrue,
 } from "../../redux/globalUI/actions";
+import NewsLetterForm from "src/custom_routes/newsletter_form/NewsLetterForm";
+import ContactForm from "src/custom_routes/contact_form/ContactForm";
+import CourseForm from "src/custom_routes/course_form/CourseForm";
+import axios from "axios";
 
 export const AppLayoutSidebarContainer = styled(motion.div)`
   min-width: 15%;
@@ -391,9 +392,8 @@ export const AppSidebarItem = ({
   label,
   currentPath,
 }: AppsidebarItemProps) => {
-  const [currentPathActive, setCurrentPathActive] = React.useState<boolean>(
-    false
-  );
+  const [currentPathActive, setCurrentPathActive] =
+    React.useState<boolean>(false);
 
   const path = getCurrentPath();
 
@@ -436,13 +436,10 @@ export const AppLayoutRoot = ({
   logoutFn,
 }: AppLayoutRootProps) => {
   const [drawerState, setDrawerState] = React.useState<boolean>(false);
-  const [profileDialogState, setProfileDialogState] = React.useState<boolean>(
-    false
-  );
-  const [
-    notificationsAnchorElement,
-    setNotificationsAnchorElement,
-  ] = React.useState<HTMLElement | null>(null);
+  const [profileDialogState, setProfileDialogState] =
+    React.useState<boolean>(false);
+  const [notificationsAnchorElement, setNotificationsAnchorElement] =
+    React.useState<HTMLElement | null>(null);
 
   const [appInfoState, setAppInfoState] = React.useState<boolean>(false);
 
@@ -466,16 +463,12 @@ export const AppLayoutRoot = ({
     setNotificationsAnchorElement(null);
   };
 
-  const {
-    EnhancedDialog,
-    setCallback,
-    setVisibility,
-    visibility,
-  } = useEnhancedDialog(
-    "Esta ação irá sincronizar os dados presentes em seu banco de dados com sua aplicação/website. Esta ação leva em média 2-3 minutos.",
-    "Sincronização de dados",
-    "info"
-  );
+  const { EnhancedDialog, setCallback, setVisibility, visibility } =
+    useEnhancedDialog(
+      "Esta ação irá sincronizar os dados presentes em seu banco de dados com sua aplicação/website. Esta ação leva em média 2-3 minutos.",
+      "Sincronização de dados",
+      "info"
+    );
 
   const dispatch = useAppDispatch();
 
@@ -528,6 +521,9 @@ export const AppLayoutRoot = ({
             />
           );
         })}
+        <ContactForm />
+        <CourseForm />
+        <NewsLetterForm />
 
         <div
           style={{

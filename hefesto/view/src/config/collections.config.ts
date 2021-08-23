@@ -7,7 +7,7 @@ const cardCollection: DashboardItem = {
   itemCategory: "creation",
   sidebarIcon: "CardTravel",
   routerPath: "cursos",
-  sidebarLabel: "Cursos",
+  sidebarLabel: "Curso",
   hasAttributes: false,
   hasCategories: false,
   fieldGroups: [{ id: "infoGroup", label: "Informações" }],

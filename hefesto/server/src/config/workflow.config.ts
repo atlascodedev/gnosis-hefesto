@@ -6,7 +6,7 @@ export const eventType: string = "forge";
 export const workflowBearerKey: string = "";
 
 try {
-  functions.config().workflow?.github?.app?.key ?? "";
+  functions?.config()?.workflow?.github?.app?.key ?? "";
 } catch (error) {
   console.log(error);
 }

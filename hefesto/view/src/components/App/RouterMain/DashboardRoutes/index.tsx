@@ -1,4 +1,4 @@
-import { RouteComponentProps, Router, useNavigate } from "@reach/router";
+import { RouteComponentProps, Router } from "@reach/router";
 import React from "react";
 import AdminRoute from "../AdminRoute";
 import { DataCreationItem } from "@hefesto/types";
@@ -10,8 +10,12 @@ import EntryCreation from "../../../DataCreation/DraftEntry";
 import EntryView from "../../../DataCreation/EntryView";
 import { useAppSelector } from "../../../../hooks/useAppSelector";
 import AppLayout from "../../../../layout_v2/Main";
-import useReferenceSize from "../../../../hooks/useReferenceSize";
 import { collections } from "../../../../config/collections.config";
+import Route from "src/custom_routes/route_component/Route";
+import { customRoutes } from "src/config/routes.config";
+import ContactFormDataGrid from "src/custom_routes/contact_form/DataGrid";
+import CourseFormDataGrid from "src/custom_routes/course_form/DataGrid";
+import NewsletterDatagrid from "src/custom_routes/newsletter_form/Datagrid";
 
 interface Props extends RouteComponentProps {}
 
@@ -42,6 +46,9 @@ const DashboardRoutes = ({ location, navigate, path, uri }: Props) => {
               );
             }
           )}
+          <Route component={ContactFormDataGrid} path={"mensagens"} />
+          <Route component={CourseFormDataGrid} path="manifestacao-interesse" />
+          <Route component={NewsletterDatagrid} path="newsletter" />
         </Router>
       </AppLayout>
     </div>
