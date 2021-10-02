@@ -44,11 +44,13 @@ export const saveContactFormToDatabase = async (
     });
   } else {
     try {
-      await db.collection("mensagens").add(req.body);
+      await db
+        .collection("mensagens")
+        .add({ ...req.body, date: new Date(Date.now()).toJSON() });
 
       return res.status(200).json({ message: "Message saved successfully" });
     } catch (error) {
-      return res.status(500).json({ error: error.message });
+      return res.status(500).json({ error: (error as any).message });
     }
   }
 };
@@ -73,13 +75,15 @@ export const saveCourseFormToDatabase = async (
     });
   } else {
     try {
-      await db.collection("manifestacaoInteresse").add(req.body);
+      await db
+        .collection("manifestacaoInteresse")
+        .add({ ...req.body, date: new Date(Date.now()).toJSON() });
 
       return res.status(200).json({
         message: "Course interest manifestation was successfully saved",
       });
     } catch (error) {
-      return res.status(500).json({ error: error.message });
+      return res.status(500).json({ error: (error as any).message });
     }
   }
 };
@@ -94,13 +98,15 @@ export const saveNewsletterFormToDatabase = async (
     });
   } else {
     try {
-      await db.collection("newsletter").add(req.body);
+      await db
+        .collection("newsletter")
+        .add({ ...req.body, date: new Date(Date.now()).toJSON() });
 
       return res
         .status(200)
         .json({ message: "Newsletter registration was saved succesfully" });
     } catch (error) {
-      return res.status(500).json({ error: error.message });
+      return res.status(500).json({ error: (error as any).message });
     }
   }
 };
