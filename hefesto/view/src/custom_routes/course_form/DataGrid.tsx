@@ -73,9 +73,11 @@ const CourseFormDataGrid = (props: Props) => {
           field: "date",
           type: "datetime",
           render: (rowData) =>
-            `${new Date(rowData.date).toLocaleDateString("pt-BR")}, ${new Date(
-              rowData.date
-            ).toLocaleTimeString("pt-BR")}`,
+            isNaN(rowData.date.getTime())
+              ? "Data indisponível"
+              : `${new Date(rowData.date).toLocaleDateString(
+                  "pt-BR"
+                )}, ${new Date(rowData.date).toLocaleTimeString("pt-BR")}`,
         },
       ]}
       data={state}

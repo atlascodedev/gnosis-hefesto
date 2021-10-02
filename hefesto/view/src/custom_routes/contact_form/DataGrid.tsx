@@ -60,9 +60,11 @@ const ContactFormDataGrid = (props: unknown) => {
           type: "datetime",
           field: "date",
           render: (rowData) =>
-            `${new Date(rowData.date).toLocaleDateString("pt-BR")}, ${new Date(
-              rowData.date
-            ).toLocaleTimeString("pt-BR")}`,
+            isNaN(rowData.date.getTime())
+              ? "Data indisponível"
+              : `${new Date(rowData.date).toLocaleDateString(
+                  "pt-BR"
+                )}, ${new Date(rowData.date).toLocaleTimeString("pt-BR")}`,
         },
       ]}
       data={state}
