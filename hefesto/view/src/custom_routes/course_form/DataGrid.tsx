@@ -9,6 +9,7 @@ interface CourseFormCollectionType {
   phone: string;
   message: string;
   course: string;
+  date: Date;
 }
 
 const getCourseFormData = async () => {
@@ -38,7 +39,14 @@ const CourseFormDataGrid = (props: Props) => {
       try {
         const courseData = await getCourseFormData();
 
-        setState(courseData);
+        setState(
+          courseData.map((value, index) => {
+            return {
+              ...value,
+              date: new Date(value.date),
+            };
+          })
+        );
       } catch (error) {
         console.log(error);
       }
@@ -60,6 +68,15 @@ const CourseFormDataGrid = (props: Props) => {
         { title: "Telefone", field: "phone" },
         { title: "Mensagem", field: "message" },
         { title: "Curso de interesse", field: "course" },
+        {
+          title: "Data e hora do contato",
+          field: "date",
+          type: "datetime",
+          render: (rowData) =>
+            `${new Date(rowData.date).toLocaleDateString("pt-BR")}, ${new Date(
+              rowData.date
+            ).toLocaleTimeString("pt-BR")}`,
+        },
       ]}
       data={state}
     />

@@ -7,6 +7,7 @@ interface Props {}
 
 interface NewsletterCollectionType {
   email: string;
+  date: Date;
 }
 
 const fetchNewsletterFormData = async () => {
@@ -29,7 +30,11 @@ const NewsletterDatagrid = (props: Props) => {
     (async () => {
       const data = await fetchNewsletterFormData();
 
-      setData(data);
+      setData(
+        data.map((value, index) => {
+          return { ...value, date: new Date(value.date) };
+        })
+      );
     })();
 
     setIsLoading(false);
@@ -38,7 +43,18 @@ const NewsletterDatagrid = (props: Props) => {
   return (
     <MaterialTableWithIcons<NewsletterCollectionType>
       isLoading={isLoading}
-      columns={[{ title: "E-mail", field: "email" }]}
+      columns={[
+        { title: "E-mail", field: "email" },
+        {
+          title: "Data e hora do recebimento",
+          type: "datetime",
+          field: "date",
+          render: (rowData) =>
+            `${new Date(rowData.date).toLocaleDateString("pt-BR")}, ${new Date(
+              rowData.date
+            ).toLocaleTimeString("pt-BR")}`,
+        },
+      ]}
       data={data}
       title={"Newsletter"}
     />

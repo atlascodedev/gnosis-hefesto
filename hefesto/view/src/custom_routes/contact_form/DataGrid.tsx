@@ -8,6 +8,7 @@ interface ContactFormCollectionType {
   email: string;
   message: string;
   phone: string;
+  date: Date;
 }
 
 const getContactFormData = async () => {
@@ -33,7 +34,11 @@ const ContactFormDataGrid = (props: unknown) => {
     (async () => {
       try {
         const data = await getContactFormData();
-        setState(data);
+        setState(
+          data.map((value, index) => {
+            return { ...value, date: new Date(value.date) };
+          })
+        );
       } catch (error) {
         console.log(error);
       }
@@ -50,6 +55,15 @@ const ContactFormDataGrid = (props: unknown) => {
         { title: "E-mail", field: "email" },
         { title: "Mensagem", field: "message" },
         { title: "Telefone", field: "phone" },
+        {
+          title: "Data e hora do contato",
+          type: "datetime",
+          field: "date",
+          render: (rowData) =>
+            `${new Date(rowData.date).toLocaleDateString("pt-BR")}, ${new Date(
+              rowData.date
+            ).toLocaleTimeString("pt-BR")}`,
+        },
       ]}
       data={state}
       title="Formulário contato"
